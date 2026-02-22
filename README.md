@@ -1,6 +1,6 @@
 # tmux-config
 
-My tmux configuration with Catppuccin Mocha theme, vim-style pane navigation, and system status modules.
+My tmux configuration with Catppuccin Mocha theme, vim-style pane navigation, session persistence, and system status modules.
 
 ## Features
 
@@ -9,8 +9,13 @@ My tmux configuration with Catppuccin Mocha theme, vim-style pane navigation, an
 - **Pane navigation**: `h/j/k/l` (vim-style)
 - **Mouse**: enabled
 - **Status bar**: application, cpu, session, uptime, battery
-- **Vi mode**: for copy mode
-- **1-indexed**: windows and panes start at 1
+- **Vi mode**: for copy mode with system clipboard (OSC 52 — works over SSH/headless)
+- **1-indexed**: windows and panes start at 1, auto-renumbered
+- **Alt+1..5**: prefix-free window switching
+- **Session persistence**: auto-save/restore via resurrect + continuum
+- **Session picker**: `tmux-sessionx` for fuzzy session switching
+- **Neovim integration**: true color, undercurl, colored underlines
+- **Splits in current dir**: new splits and windows inherit working directory
 
 ## Installation
 
@@ -29,8 +34,13 @@ Then open tmux and press `C-k` + `I` (capital I) to install plugins.
 | Config (symlink) | `~/.tmux.conf` -> `<repo>/tmux.conf` |
 | TPM (plugin manager) | `~/.tmux/plugins/tpm/` |
 | Catppuccin theme | `~/.tmux/plugins/tmux/` |
+| tmux-sensible | `~/.tmux/plugins/tmux-sensible/` |
 | tmux-cpu | `~/.tmux/plugins/tmux-cpu/` |
 | tmux-battery | `~/.tmux/plugins/tmux-battery/` |
+| tmux-resurrect | `~/.tmux/plugins/tmux-resurrect/` |
+| tmux-continuum | `~/.tmux/plugins/tmux-continuum/` |
+| tmux-yank | `~/.tmux/plugins/tmux-yank/` |
+| tmux-sessionx | `~/.tmux/plugins/tmux-sessionx/` |
 
 ## Can I delete the repo after installation?
 
